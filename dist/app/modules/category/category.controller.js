@@ -20,6 +20,7 @@ const sendResponse_1 = __importDefault(require("../../../shared/sendResponse"));
 const category_constants_1 = require("./category.constants");
 const category_service_1 = require("./category.service");
 const insertIntoDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("11111111111111", req.body);
     const result = yield category_service_1.CategoryService.insertIntoDB(req.body);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
@@ -29,7 +30,7 @@ const insertIntoDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, v
     });
 }));
 const getAllFromDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // console.log(req.query);
+    console.log("22222222222222");
     const filters = (0, pick_1.default)(req.query, category_constants_1.categoryFilterableFields);
     const options = (0, pick_1.default)(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
     const result = yield category_service_1.CategoryService.getAllFromDB(filters, options);

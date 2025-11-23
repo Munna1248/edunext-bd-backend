@@ -109,7 +109,7 @@ const getAllFromDB = (filters, options) => __awaiter(void 0, void 0, void 0, fun
                 else if (key == 'location' && Array.isArray(value)) {
                     return {
                         location: {
-                            in: value,
+                            in: value, // Use the 'in' keyword to check if 'location' matches any of the values in the 'locations' array
                             mode: 'insensitive'
                         }
                     };

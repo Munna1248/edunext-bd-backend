@@ -40,7 +40,7 @@ const updateTutorZodSchema = zod_1.z.object({
         bio: zod_1.z.string().optional(),
         imageUrl: zod_1.z.string().optional(),
         gender: zod_1.z.string().optional(),
-        location: zod_1.z.string().optional(),
+        location: zod_1.z.string().optional(), // Add the new subjectId field
         subjects: zod_1.z.array(zod_1.z.string()).optional(), // Add the new subjects array field
     }),
 });

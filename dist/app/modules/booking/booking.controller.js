@@ -19,7 +19,7 @@ const pick_1 = __importDefault(require("../../../shared/pick"));
 const sendResponse_1 = __importDefault(require("../../../shared/sendResponse"));
 const booking_service_1 = require("./booking.service");
 const insertIntoDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    //console.log(req.body)
+    console.log("555555555555555", req.body);
     //c
     const user = req.user;
     const result = yield booking_service_1.BookingService.insertIntoDB(req.body, user);
@@ -55,6 +55,7 @@ const updateOneInDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, 
     });
 }));
 const getByIdFromDB = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("BOOkkkk SINGLE");
     const user = req.user;
     const bookingId = req.params.bookingId;
     const result = yield booking_service_1.BookingService.getByIdFromDB(user, bookingId);

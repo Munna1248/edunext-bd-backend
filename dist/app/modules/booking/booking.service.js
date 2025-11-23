@@ -66,9 +66,6 @@ const getBookingByCourseId = (user, courseId, options) => __awaiter(void 0, void
                 paymentStatus: 'PAID'
             }
         },
-        skip,
-        take: limit,
-        orderBy: { [sortBy]: sortOrder },
     });
     const total = yield prisma_1.prisma.booking.count({
         where: {

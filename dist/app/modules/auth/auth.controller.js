@@ -47,7 +47,7 @@ const signupUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, voi
     });
 }));
 const signinUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // console.log("2222222222222222");
+    console.log("2222222222222222");
     const loginData = __rest(req.body, []);
     const result = yield auth_service_1.AuthService.signinUser(loginData);
     const { refreshToken } = result;

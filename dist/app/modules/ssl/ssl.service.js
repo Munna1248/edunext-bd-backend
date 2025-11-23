@@ -25,7 +25,7 @@ const initPayment = (payload) => __awaiter(void 0, void 0, void 0, function* () 
             store_passwd: config_1.default.ssl.storePass,
             total_amount: payload.total_amount,
             currency: 'BDT',
-            tran_id: (0, uuid_1.v4)(),
+            tran_id: (0, uuid_1.v4)(), // use unique tran_id for each api call
             success_url: 'http://localhost:5010/api/v1/payments/success',
             fail_url: 'http://localhost:5010/api/v1/payments/fail',
             cancel_url: 'http://localhost:5010/api/v1/payments/cancel',
